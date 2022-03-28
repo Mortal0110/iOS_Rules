@@ -1,1 +1,4 @@
 #adguardpremium
+^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/adguard.js
+
+hostname = mobile-api.adguard.com
