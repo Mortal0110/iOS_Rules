@@ -1,0 +1,14 @@
+#百度网盘广告屏蔽
+http:\/\/rp\.hpplay\.cn\/logouts url reject
+https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info url reject
+https:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx url reject
+https:\/\/pan\.baidu\.com\/api\/useractivity\/activity url reject
+https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list url reject
+https:\/\/sofire\.baidu\.com\/ios\/.+ url reject
+https:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js url reject
+https:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html url reject
+https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info url reject
+https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png url reject
+https:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/ts_ad\/ url reject
+https:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adv\? url reject
+https:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?(vip|from) url reject
