@@ -1,0 +1,4 @@
+#Endlessgoogle
+^https?:\/\/www\.google\..*\/search url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
+
+hostname = www.google.*
