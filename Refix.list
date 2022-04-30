@@ -111,8 +111,6 @@ host-suffix,whitemoon.top,direct
 IP-CIDR,10.0.0.12/32,direct
 host-suffix,push.apple.com,direct
 host-suffix,jddebug.com,reject
-#ios黑科技
-host-suffix,ivapp.cn,Outside
 
 ##backiee广告屏蔽
 host-suffix,stats.g.doubleclick.net,reject
