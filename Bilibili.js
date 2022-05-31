@@ -88,7 +88,7 @@ if (magicJS.read(blackKey)) {
           // 尝试使用tab name直观修改
           const tabNameList = new Set(["直播", "推荐", "热门", "追番", "影视"]);
           // 107 概念版游戏中心，获取修改为Story模式
-          const topList = new Set([176, 222, 107]);
+          const topList = new Set([176,107]);
           // 102 开始为概念版id
           const bottomList = new Set([177, 178, 179, 181, 102, 103, 104, 105, 106]);
           let obj = JSON.parse(magicJS.response.body);
