@@ -1,0 +1,4 @@
+[Mitm]
+hostname = api.weibo.cn, mapi.weibo.com
+[rewrite_local]
+^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) url script-request-header https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js
