@@ -1,0 +1,35 @@
+#!name= VIP整合
+#!desc= 该订阅为脚本合集,用于Remove Ads + unlock vip.
+#!openUrl=https://github.com/TaiPresident/iOS_Rules/blob/main/lnplugin/VIP.luplugin
+#!author= TaiPresident整合
+#!homepage= https://github.com/TaiPresident/iOS_Rules
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+
+# 该订阅为脚本合集,用于Remove Ads + unlock vip.
+# 集成: NobyDa、yichahucha、Choler、onewayticket、langkhach以及个人收集整理的脚本. 
+# 需要配置 CA 证书并启用 MitM 开关.
+
+
+
+[Script]
+# adguardpremium
+http-response ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/adguard.js
+# CamScanner 解锁部分高级特权（by NobyDa）
+http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
+# Endlessgoogle
+http-response ^https?:\/\/www\.google\..*\/search requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
+# keep
+http-response https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) requires-body=1,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/keep.js
+# 彩云天气
+http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
+# vsco
+http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/vsco.js
+# 流利说·阅读（解锁流利说·阅读会员、解锁阅读权限、解锁音频权限等）
+http-response ^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/LiuLiShuoYueDu/Script/LiuLiShuoYueDu.js,requires-body=true, timeout=10, tag=流利说·阅读
+# Picsew解锁专业版
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
+# 百度网盘倍速播放
+http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+
+[MITM]
+hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,vira.llsapp.com,buy.itunes.apple.com,pan.baidu.com
