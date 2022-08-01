@@ -72,9 +72,7 @@ function HTTP(
   function send(method, options) {
     options =
       typeof options === 'string'
-        ? {
-            url: options,
-          }
+        ? {url: options, }
         : options;
     const baseURL = defaultOptions.baseURL;
     if (baseURL && !URL_REGEX.test(options.url || '')) {
