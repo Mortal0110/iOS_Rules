@@ -1,0 +1,15 @@
+#!name= WPS高级版
+#!desc= 解锁WPS部分会员功能以及稻壳文库
+#!openUrl=https://github.com/TaiPresident/iOS_Rules/edit/main/lnplugin
+#!author= TaiPresident整合
+#!homepage= https://github.com/TaiPresident/iOS_Rules
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+
+[Script]
+# 解锁部分功能
+http-response ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+# 解锁稻壳文库
+http-response ^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) requires-body=1,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSDocerVIPowerCrack.js
+
+[MITM]
+hostname = *account.wps.cn, *account.wps.com，*.docer.wps.cn, vipapi.wps.cn
