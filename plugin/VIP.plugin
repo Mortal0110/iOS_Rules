@@ -1,5 +1,5 @@
 #!name= VIP整合
-#!desc= 该订阅为脚本合集,用于Remove Ads + unlock vip.
+#!desc= 该订阅为脚本合集,用于unlock vip.
 #!openUrl=https://github.com/TaiPresident/iOS_Rules/blob/main/lnplugin/VIP.luplugin
 #!author= TaiPresident整合
 #!homepage= https://github.com/TaiPresident/iOS_Rules
@@ -26,10 +26,8 @@ http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
 # 百度网盘倍速播放
 http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
-#联通营业厅 去轮播广告 (By Wangsc1)
-http-response ^https?://m.client.10010.com/uniAdmsInterface/getHomePageAd requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/china_unicom.js
 #lightroom
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
 
 [MITM]
-hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,buy.itunes.apple.com,pan.baidu.com,m.client.10010.com,photos.adobe.io
+hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,buy.itunes.apple.com,pan.baidu.com,photos.adobe.io
