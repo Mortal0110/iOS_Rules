@@ -3,7 +3,7 @@
 #!openUrl=https://github.com/TaiPresident/iOS_Rules/edit/main/lnplugin
 #!author= TaiPresident修改
 #!homepage= https://github.com/TaiPresident/iOS_Rules
-#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
 
 
 [MITM]
@@ -11,99 +11,99 @@ hostname = duckduckgo.com
 
 [URL Rewrite]
 # wiki  (维基百科)
-^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ url 302 http://wikipedia.org/wiki/$2
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
 
 # wk  (维基中文)
-^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ url 302 https://zh.wikipedia.org/wiki/$2
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
 
 # 翻译
 # yd：有道
-^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ url 302 http://dict.youdao.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=youdao\+([^&]+).+ url 302 http://dict.youdao.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=Youdao\+([^&]+).+ url 302 http://dict.youdao.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=YouDao\+([^&]+).+ url 302 http://dict.youdao.com/search?q=$1
+^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=youdao\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Youdao\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=YouDao\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
 
 # 社区
 # db：豆瓣
-^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ url 302 https://m.douban.com/search/?query=$1
-^https:\/\/duckduckgo.com\/\?q=douban\+([^&]+).+ url 302 https://m.douban.com/search/?query=$1
-^https:\/\/duckduckgo.com\/\?q=Douban\+([^&]+).+ url 302 https://m.douban.com/search/?query=$1
-^https:\/\/duckduckgo.com\/\?q=DouBan\+([^&]+).+ url 302 https://m.douban.com/search/?query=$1
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=douban\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=Douban\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=DouBan\+([^&]+).+ https://m.douban.com/search/?query=$1 302
 # zh: 知乎
-^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ url 302 https://www.zhihu.com/search?type=content&q=$1
-^https:\/\/duckduckgo.com\/\?q=zhihu\+([^&]+).+ url 302 https://www.zhihu.com/search?type=content&q=$1
-^https:\/\/duckduckgo.com\/\?q=Zhihu\+([^&]+).+ url 302 https://www.zhihu.com/search?type=content&q=$1
-^https:\/\/duckduckgo.com\/\?q=ZhiHu\+([^&]+).+ url 302 https://www.zhihu.com/search?type=content&q=$1
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+^https:\/\/duckduckgo.com\/\?q=zhihu\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Zhihu\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+^https:\/\/duckduckgo.com\/\?q=ZhiHu\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
 # wb: 微博
-^https:\/\/duckduckgo.com\/\?q=wb\+([^&]+).+ url 302 https://s.weibo.com/weibo/$1
-^https:\/\/duckduckgo.com\/\?q=weibo\+([^&]+).+ url 302 https://s.weibo.com/weibo/$1
-^https:\/\/duckduckgo.com\/\?q=Weibo\+([^&]+).+ url 302 https://s.weibo.com/weibo/$1
-^https:\/\/duckduckgo.com\/\?q=WeiBo\+([^&]+).+ url 302 https://s.weibo.com/weibo/$1
+^https:\/\/duckduckgo.com\/\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+^https:\/\/duckduckgo.com\/\?q=weibo\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+^https:\/\/duckduckgo.com\/\?q=Weibo\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+^https:\/\/duckduckgo.com\/\?q=WeiBo\+([^&]+).+ https://s.weibo.com/weibo/$1 302
 # wx: 微信
-^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ url 302 https://weixin.sogou.com/weixinwap?query=$1
-^https:\/\/duckduckgo.com\/\?q=weixin\+([^&]+).+ url 302 https://weixin.sogou.com/weixinwap?query=$1
-^https:\/\/duckduckgo.com\/\?q=Weixin\+([^&]+).+ url 302 https://weixin.sogou.com/weixinwap?query=$1
-^https:\/\/duckduckgo.com\/\?q=WeiXin\+([^&]+).+ url 302 https://weixin.sogou.com/weixinwap?query=$1
-^https:\/\/duckduckgo.com\/\?q=WeChat\+([^&]+).+ url 302 https://weixin.sogou.com/weixinwap?query=$1
-^https:\/\/duckduckgo.com\/\?q=Wechat\+([^&]+).+ url 302 https://weixin.sogou.com/weixinwap?query=$1
+^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=weixin\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=Weixin\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=WeiXin\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=WeChat\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=Wechat\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
 # rd  (Reddit)
-^https:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ url 302 https://www.reddit.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=Reddit\+([^&]+).+ url 302 https://www.reddit.com/search?q=$1
+^https:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Reddit\+([^&]+).+ https://www.reddit.com/search?q=$1 302
 # tw：Twitter
-^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ url 302 https://twitter.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=twitter\+([^&]+).+ url 302 https://twitter.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=Twitter\+([^&]+).+ url 302 https://twitter.com/search?q=$1
+^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=twitter\+([^&]+).+ https://twitter.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Twitter\+([^&]+).+ https://twitter.com/search?q=$1 302
 # gh：GitHub
-^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ url 302 https://github.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=github\+([^&]+).+ url 302 https://github.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=Github\+([^&]+).+ url 302 https://github.com/search?q=$1
-^https:\/\/duckduckgo.com\/\?q=GitHub\+([^&]+).+ url 302 https://github.com/search?q=$1
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=github\+([^&]+).+ https://github.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Github\+([^&]+).+ https://github.com/search?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=GitHub\+([^&]+).+ https://github.com/search?q=$1 302
 # csdn: CSDN
-^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ url 302 https://so.csdn.net/so/search/s.do?q=$1&t=&u=
-^https:\/\/duckduckgo.com\/\?q=CSDN\+([^&]+).+ url 302 https://so.csdn.net/so/search/s.do?q=$1&t=&u=
+^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+^https:\/\/duckduckgo.com\/\?q=CSDN\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
 
 # > 购物
 # amz: 亚马逊
-^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ url 302 https://www.amazon.cn/gp/aw/s/?k=$1
-^https:\/\/duckduckgo.com\/\?q=amazon\+([^&]+).+ url 302 https://www.amazon.cn/gp/aw/s/?k=$1
+^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+^https:\/\/duckduckgo.com\/\?q=amazon\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
 # zdm：什么值得买
-^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ url 302 https://search.m.smzdm.com/?v=b&s=$1
+^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
 # jd：京东
-^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=jingdong\+([^&]+).+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=Jingdong\+([^&]+).+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=JingDong\+([^&]+).+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=jingdong\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=Jingdong\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=JingDong\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
 # tb：淘宝
-^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ url 302 https://s.m.taobao.com/h5?q=$1
-^https:\/\/duckduckgo.com\/\?q=taobao\+([^&]+).+ url 302 https://s.m.taobao.com/h5?q=$1
-^https:\/\/duckduckgo.com\/\?q=Taobao\+([^&]+).+ url 302 https://s.m.taobao.com/h5?q=$1
-^https:\/\/duckduckgo.com\/\?q=TaoBao\+([^&]+).+ url 302 https://s.m.taobao.com/h5?q=$1
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=taobao\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Taobao\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=TaoBao\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
 
 # 视频资源
 # bl：哔哩哔哩 
-^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=bili\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=Bili\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=bilibili\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=BiliBili\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=Bilibili\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
+^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=bili\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=Bili\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=bilibili\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=BiliBili\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=Bilibili\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
 # ytb：YouTube
-^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ url 302 https://www.youtube.com/results?search_query=$1
-^https:\/\/duckduckgo.com\/\?q=youtube\+([^&]+).+ url 302 https://www.youtube.com/results?search_query=$1
-^https:\/\/duckduckgo.com\/\?q=YouTube\+([^&]+).+ url 302 https://www.youtube.com/results?search_query=$1
+^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+^https:\/\/duckduckgo.com\/\?q=youtube\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+^https:\/\/duckduckgo.com\/\?q=YouTube\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
 # ph：PornHub 
-^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ url 302 https://cn.pornhub.com/video/search?search=$1
-^https:\/\/duckduckgo.com\/\?q=pornhub\+([^&]+).+ url 302 https://cn.pornhub.com/video/search?search=$1
-^https:\/\/duckduckgo.com\/\?q=PornHub\+([^&]+).+ url 302 https://cn.pornhub.com/video/search?search=$1
+^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+^https:\/\/duckduckgo.com\/\?q=pornhub\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+^https:\/\/duckduckgo.com\/\?q=PornHub\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
 
 # 默认搜索
 # gg：谷歌
-^https:\/\/duckduckgo.com\/\?q=gg\+([^&]+).+ url 302 https://www.google.com/search?q=$1 
-^https:\/\/duckduckgo.com\/\?q=google\+([^&]+).+ url 302 https://www.google.com/search?q=$1 
-^https:\/\/duckduckgo.com\/\?q=Google\+([^&]+).+ url 302 https://www.google.com/search?q=$1 
+^https:\/\/duckduckgo.com\/\?q=gg\+([^&]+).+ https://www.google.com/search?q=$1  302
+^https:\/\/duckduckgo.com\/\?q=google\+([^&]+).+ https://www.google.com/search?q=$1  302
+^https:\/\/duckduckgo.com\/\?q=Google\+([^&]+).+ https://www.google.com/search?q=$1  302
 # bd：百度
-^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1
-^https:\/\/duckduckgo.com\/\?q=baidu\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1
-^https:\/\/duckduckgo.com\/\?q=Baidu\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo.com\/\?q=baidu\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo.com\/\?q=Baidu\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
 # 无指令：必应
-^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302 https://cn.bing.com/search?q=$1
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://cn.bing.com/search?q=$1 302
