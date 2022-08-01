@@ -22,8 +22,6 @@ http-response https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.
 http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
 # vsco
 http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/vsco.js
-# 流利说·阅读（解锁流利说·阅读会员、解锁阅读权限、解锁音频权限等）
-http-response ^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/LiuLiShuoYueDu/Script/LiuLiShuoYueDu.js,requires-body=true, timeout=10, tag=流利说·阅读
 # Picsew解锁专业版
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
 # 百度网盘倍速播放
@@ -34,4 +32,4 @@ http-response ^https?://m.client.10010.com/uniAdmsInterface/getHomePageAd requir
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
 
 [MITM]
-hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,vira.llsapp.com,buy.itunes.apple.com,pan.baidu.com,m.client.10010.com,photos.adobe.io
+hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,buy.itunes.apple.com,pan.baidu.com,m.client.10010.com,photos.adobe.io
