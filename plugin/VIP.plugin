@@ -32,10 +32,8 @@ http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script
 http-response ^https?:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/varlens.js
 # 钱迹(自行添加hostname)
 http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/qj.js
-# 小睡眠
-http-response ^https:\/\/api\.psy-1\.com\/cosleep\/user\/info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/xiaoshuimian.js
 # 流利说.阅读 (by@火羽&@singee)
 http-response ^https?:\/\/vira\.llsapp\.com\/api\/v2\/readings\/(accessible|limitation) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/llyd.js,tag=流利说.阅读
 
 [MITM]
-hostname = mobile-api.adguard.com,ap*.intsig.net,api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, vsco.co,buy.itunes.apple.com,pan.baidu.com,photos.adobe.io,mid.zineapi.com,qianji.xxoojoke.com,api.psy-1.com,vira.llsapp.com
+hostname = mobile-api.adguard.com,ap*.intsig.net,api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, vsco.co,buy.itunes.apple.com,pan.baidu.com,photos.adobe.io,mid.zineapi.com,qianji.xxoojoke.com,vira.llsapp.com
