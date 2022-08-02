@@ -28,6 +28,11 @@ http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-res
 http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
 #lightroom
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
+# varlens(自行添加hostname)
+http-response ^https?:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/varlens.js
+# 钱迹(自行添加hostname)
+http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/qj.js
+
 
 [MITM]
-hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,buy.itunes.apple.com,pan.baidu.com,photos.adobe.io
+hostname = mobile-api.adguard.com,ap*.intsig.net,www.google.*,revenuecat.lakecoloring.com, api.gotokeep.com,59.110.149.231,129.211.156.213, biz.caiyunapp.com, api.revenuecat.com,buy.itunes.apple.com,pan.baidu.com,photos.adobe.io,mid.zineapi.com,qianji.xxoojoke.com
