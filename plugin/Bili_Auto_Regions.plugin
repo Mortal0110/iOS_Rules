@@ -1,6 +1,5 @@
 #!name= 哔哩哔哩, 港澳台番剧自动切换地区 & 显示豆瓣评分
-#!desc= 地区自动切换功能仅适用于Surge4.7+(iOS)，Loon2.1.10(286)+，QuanX1.0.22(543)+
-低于以上版本仅显示豆瓣评分.如需搜索指定地区番剧, 可在搜索框添加后缀" 港", " 台", " 中". 例如: 进击的巨人 港
+#!desc= 地区自动切换功能仅适用于Surge4.7+(iOS)，Loon2.1.10(286)+，QuanX1.0.22(543)+ 低于以上版本仅显示豆瓣评分.如需搜索指定地区番剧, 可在搜索框添加后缀" 港", " 台", " 中". 例如: 进击的巨人 港
 #!openUrl=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
 
