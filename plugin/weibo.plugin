@@ -1,8 +1,6 @@
 #!name=微博配置（微博信息流太大，内存泄漏）
 #!desc=删除多数微博广告和一些自定义配置
 #!openUrl=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/plugin/weibo.plugin
-#!author= TaiPresident整合
-#!homepage= https://github.com/zmqcherish/proxy-script
 #!icon= https://raw.githubusercontent.com/zmqcherish/proxy-script/main/imgs/icon/weibo.png
 
 [Script]
