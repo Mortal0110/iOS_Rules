@@ -1,6 +1,6 @@
 #!name= VIP整合
 #!desc= 该订阅为脚本合集,用于unlock vip.
-#!openUrl=https://github.com/TaiPresident/iOS_Rules/blob/main/lnplugin/VIP.plugin
+#!openUrl=https://github.com/TaiPresident/iOS_Rules/blob/main/plugin/VIP.plugin
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
 
 # 该订阅为脚本合集,用于Remove Ads + unlock vip.
@@ -19,7 +19,7 @@ http-response https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.
 # 彩云天气
 http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
 # vsco
-http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/vsco.js
+http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/vsco.js
 # Picsew解锁专业版
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
 # 百度网盘倍速播放
