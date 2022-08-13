@@ -1,6 +1,6 @@
 # iOS_Rules
 
-AD        为去广告重写的目录
+AD        为去广告重写的目录 \n /n
 cookie    为获取cookie的脚本目录
 Rewrite   为Quantumult X重写的目录
 Ruleset   为分流规则的目录
