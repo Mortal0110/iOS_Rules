@@ -11,7 +11,7 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 # BiliBili漫画去广告
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 # 屏蔽首页右上活动
-URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,REJECT
+# URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,REJECT
 
 [URL Rewrite]
 # 去除搜索中的大家都在搜
@@ -26,7 +26,7 @@ URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,REJECT
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject-dict
 # 屏蔽首页右上活动
-^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
+# ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
 
 [Script]
 http-response ^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_追番去广告
@@ -36,7 +36,7 @@ http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list requires-body=
 http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_标签页处理
 http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_我的页面处理
 http-response ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js, tag=BiliBili_番剧解锁1080P+
-http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/TaiPresident/QuantumultX/main/Script/bilibili-proto.js,requires-body=true,binary-body-mode=true,tag=BiliBili_proto去广告
+# http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/TaiPresident/QuantumultX/main/Script/bilibili-proto.js,requires-body=true,binary-body-mode=true,tag=BiliBili_proto去广告
 http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js,tag=BiliBili_观影页面去广告
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js,tag=BiliBili_应用开屏广告预加载
 
