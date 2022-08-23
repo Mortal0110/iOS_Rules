@@ -1,0 +1,11 @@
+#!name= 酷安去广告
+#!desc= 酷安去广告
+#!openUrl= https://t.me/ddgksf2021
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+
+
+[Script]
+http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path= https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
+
+[MITM]
+hostname = api.coolapk.com
