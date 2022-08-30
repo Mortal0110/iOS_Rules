@@ -4,6 +4,7 @@
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
 
 [Rule]
+DOMAIN,grpc.biliapi.net,REJECT
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 # 可能的一些推广(beta)
