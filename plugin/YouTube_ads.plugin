@@ -1,0 +1,20 @@
+#!name = YouTube去广告（B方案）
+#!desc = 通过将视频广告时间调整至极短来达到跳过视频广告的效果，并去除了首页瀑布流和播放页的推荐广告。Premium订阅请勿使用，需要iOS 15的支持，YouTube版本需要不低于15.26.4。
+#!openUrl = 
+#!author = app2smile
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
+
+[Rewrite]
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 header
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
+
+[Script]
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads_plan_b.js, requires-body=true, binary-body-mode=true, timeout=10, tag=去瀑布流和播放页广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
+
+[MITM]
+hostname = -redirector*.googlevideo.com,youtubei.googleapis.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com,
