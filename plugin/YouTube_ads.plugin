@@ -14,7 +14,7 @@
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
 
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads_plan_b.js, requires-body=true, binary-body-mode=true, timeout=10, tag=去瀑布流和播放页广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/YouTube.js, requires-body=true, binary-body-mode=true, timeout=10, tag=去瀑布流和播放页广告, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/60px/YouTube.png
 
 [MITM]
 hostname = -redirector*.googlevideo.com,youtubei.googleapis.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com,
