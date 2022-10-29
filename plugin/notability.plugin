@@ -4,8 +4,9 @@
 #!homepage=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NotabilityProCrack.js
 #!author=Hausd0rff
 [Script]
-# Notability解锁订阅
-http-response ^https?:\/\/notability\.com\/subscriptions script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/NotabilityProCrack.js requires-body=true, tag=NotabilityCrack
+http-response ^https?:\/\/notability\.com\/subscriptions requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NotabilityProCrack.js
 
-[Mitm] 
+[MITM]
 hostname = notability.com
+
+
