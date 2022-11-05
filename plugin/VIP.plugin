@@ -17,7 +17,7 @@ http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property
 # keep
 http-response https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) requires-body=1,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/keep.js
 # 彩云天气
-http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
+http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/caiyun.js
 # vsco
 http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/vsco.js
 # Picsew解锁专业版
@@ -27,9 +27,9 @@ http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires
 #lightroom
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
 # varlens(自行添加hostname)
-http-response ^https?:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/raw/master/Crack/varlens.js
+http-response ^https?:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/varlen.js
 # 钱迹(自行添加hostname)
-http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/raw/master/Crack/qj.js
+http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/qj.js
 # 百度文库解锁VIP文档阅读权限
 http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/baidulibrary.js
 # 白描黄金会员
