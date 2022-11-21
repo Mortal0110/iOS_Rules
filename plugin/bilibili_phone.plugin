@@ -1,34 +1,7 @@
 #!name= BiliBili去广告
 #!desc= BiliBili去广告
 #!openUrl=https://github.com/TaiPresident/iOS_Rules/edit/main/plugin
-#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
-/*
-[Rule]
-DOMAIN,grpc.biliapi.net,REJECT
-DOMAIN-SUFFIX,cm.bilibili.com,REJECT
-URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
-# 可能的一些推广(beta)
-URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
-# BiliBili漫画去广告
-URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
-# 屏蔽首页右上活动
-URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,REJECT
-
-[URL Rewrite]
-# 去除搜索中的大家都在搜
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject-dict
-# 去除动态中的话题
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
-# 去除动态中的最常访问
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject-dict
-# 可能的一些推广(beta)
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
-# BiliBili漫画去广告
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject-dict
-# 屏蔽首页右上活动
-^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
-*/
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/
 [Script]
 http-response ^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_追番去广告
 http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_直播去广告
@@ -40,4 +13,4 @@ http-response ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x
 # http-response ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/TaiPresident/QuantumultX/main/Script/bilibili-proto.js,requires-body=true,binary-body-mode=true,tag=BiliBili_proto去广告
 
 [MITM]
-hostname = *.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, app.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net
+hostname = *.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net
