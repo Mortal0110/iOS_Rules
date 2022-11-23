@@ -1,0 +1,13 @@
+#!name = 云闪付广告过滤
+#!desc = 过滤银联云闪付广告
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/UnionPay.png
+
+[Rule]
+DOMAIN-KEYWORD,switch.cup.com.cn,REJECT
+DOMAIN-KEYWORD,sdk.open.talk.getui.net,REJECT
+DOMAIN-KEYWORD,sdk-conf.getui.com,REJECT
+DOMAIN-KEYWORD,cm-10-138.getui.com,REJECT
+DOMAIN-KEYWORD,ads.95516.com,REJECT
