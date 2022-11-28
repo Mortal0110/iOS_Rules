@@ -1,5 +1,5 @@
 #!name= 去广告
-#!desc= 酷安、百度云、高德
+#!desc= 酷安、百度云、高德、喜马拉雅
 #!openUrl= https://t.me/ddgksf2021
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
 
@@ -31,10 +31,32 @@ DOMAIN-SUFFIX,u51.me,REJECT
 ^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
+# > ximalaya
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
+^https?:\/\/.*\.xima.*\.com\/hotWord url reject
+^https?:\/\/.*\.xima.*\.com\/guideWord url reject
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 
 [Script]
 # > coolapk
 http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path= https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
+# > ximalaya
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽首页滚动_Ad
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽Tab页滚动_Ad
+http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=# 喜马拉雅_去除我的页面Ad_Tag
 
 [MITM]
-hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com
+hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*
