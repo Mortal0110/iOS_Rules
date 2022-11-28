@@ -1,7 +1,25 @@
 #!name= 去广告
-#!desc= 酷安、百度云
+#!desc= 酷安、百度云、高德
 #!openUrl= https://t.me/ddgksf2021
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+
+[Rule]
+# > gaodeditu
+DOMAIN,u51.me,REJECT
+DOMAIN,logs.amap.com,REJECT
+DOMAIN,icloud-amap.com,REJECT
+DOMAIN,apiinit.amap.com,REJECT
+DOMAIN,aboard.apilocate.amap.com,REJECT
+DOMAIN-KEYWORD,ossgw.alicdn.com,REJECT
+DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
+DOMAIN-SUFFIX,logs.amap.com,REJECT
+DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
+DOMAIN-SUFFIX,page.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
+DOMAIN-SUFFIX,shouji.sougou.com,REJECT
+DOMAIN-SUFFIX,adiu.amap.com,REJECT
+DOMAIN-SUFFIX,u51.me,REJECT
 
 [Rewrite]
 # > baiduwangpan
@@ -9,10 +27,14 @@
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/welfare\/list reject-200
 ^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject-200
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
+# > gaodeditu
+^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
 
 [Script]
 # > coolapk
 http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path= https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
 
 [MITM]
-hostname = pan.baidu.com, api.coolapk.com
+hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com
