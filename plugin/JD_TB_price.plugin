@@ -1,7 +1,7 @@
 #!name= 京东淘宝比价
 #!desc= 京东淘宝历史价格
 #!openUrl= https://github.com/TaiPresident/iOS_Rules/blob/main/plugin/JD_TB_price.plugin
-#!icon= https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/JT.png
+#!icon= https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/JD.png
 
 [Script]
 # 京东历史价格
