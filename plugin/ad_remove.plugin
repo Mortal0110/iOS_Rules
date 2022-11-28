@@ -1,0 +1,18 @@
+#!name= 去广告
+#!desc= 酷安、百度云
+#!openUrl= https://t.me/ddgksf2021
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+
+[Rewrite]
+# > baiduwangpan
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/bchannel\/list reject-200
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/welfare\/list reject-200
+^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject-200
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
+
+[Script]
+# > coolapk
+http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path= https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
+
+[MITM]
+hostname = pan.baidu.com, api.coolapk.com
