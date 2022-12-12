@@ -1,22 +1,34 @@
+#!name= 微博国际版去广告
+#!desc= 微博国际版去广告
+#!author = @ddgksf2013
+#!homepage = https://github.com/ddgksf2013
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
+
+[MITM]
 hostname = *api.weibo*,sdkapp.uve.weibo.com
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users url reject-dict
+
+[Rewrite]
+# ～ WeiboLite_微博国际版_hot_search@ddgksf2013
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - reject-dict
 # ～ WeiboLite_微博国际版_热推荐@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? url reject-dict
-# ～ WeiboLite_微博国际版_sdkad@ddgksf2013
-https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php  url reject-dict
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - reject-dict
 # ～ WeiboLite_微博国际版_屏蔽search_suggest@ddgksf2013 
-# ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest url reject-dict
-# ～ WeiboLite_微博国际版_屏蔽searching_info@ddgksf2013
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_search_info.json
-# ～ WeiboLite_微博国际版_屏蔽search_topic@ddgksf2013 
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url script-echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest - reject-dict
 # ～ WeiboLite_微博国际版_屏蔽开屏广告@ddgksf2013 
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*ads url reject-dict
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*ads - reject-dict
+
+[Script]
+# ～ WeiboLite_微博国际版_sdkad@ddgksf2013
+http-response https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php requires-body=1, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# ～ WeiboLite_微博国际版_屏蔽searching_info@ddgksf2013
+# ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url echo-response text/html echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_search_info.json
+# ～ WeiboLite_微博国际版_屏蔽search_topic@ddgksf2013 
+http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic requires-body=1, script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
 # ～ WeiboLite_微博国际版_主页推荐tab|热门tab去广告@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline requires-body=1, script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
 # ～ WeiboLite_微博国际版_主页关注tab去广告@ddgksf2013 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline requires-body=1, script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
 # ～ WeiboLite_微博国际版_趋势tab去广告@ddgksf2013 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist requires-body=1, script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
 # ～ WeiboLite_微博国际版_趋势顶部CARD去广告@ddgksf2013
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+http-response ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends requires-body=1, script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
