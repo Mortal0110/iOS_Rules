@@ -2,7 +2,7 @@
 #!desc= 微博国际版去广告
 #!author = @ddgksf2013
 #!homepage = https://github.com/ddgksf2013
-#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
+#!icon= https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/Weibo.png
 
 [MITM]
 hostname = *api.weibo*,sdkapp.uve.weibo.com
