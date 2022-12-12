@@ -1,5 +1,5 @@
 #!name= BiliBili去广告
-#!desc= BiliBili去广告
+#!desc= BiliBili去广告整合
 #!openUrl=https://github.com/TaiPresident/iOS_Rules/edit/main/plugin
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
 
@@ -11,12 +11,26 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
 # BiliBili漫画去广告
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
-# 屏蔽首页右上活动
-URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,REJECT
 
-[URL Rewrite]
+[Rewrite]
 # ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - reject-dict
+# ～ BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? - reject-dict
+# ～ BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+# ～ BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+# ～ BiliBili_哔哩哔哩_应用开屏去广告@bm7
+^https://app.bilibili.com/x/v2/splash/show - reject-dict
+# ～ BiliBili_哔哩哔哩_Material_Ad@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
+# ～ BiliBili_哔哩哔哩_小卡片广告@ddgksf2013
+^https://api.bilibili.com/pgc/season/player/cards - reject-dict
+# ～ BiliBili_哔哩哔哩_去除动态中的话题@bm7
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
+# ～ BiliBili_哔哩哔哩_漫画去广告@ddgksf2013
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
 # 去除搜索中的大家都在搜
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject-dict
 # 去除动态中的话题
@@ -28,6 +42,8 @@ URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,REJECT
 # BiliBili漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject-dict
+# 切换至腾讯CDN以提高视频加载速度
+^https:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
 # 屏蔽首页右上活动
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
 
@@ -45,5 +61,5 @@ http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? requires
 
 
 [MITM]
-hostname = *.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, app.bilibili.com
+hostname = *.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, app.bilibili.com, upos-hz-mirrorakam.akamaized.net
 
