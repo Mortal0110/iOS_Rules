@@ -100,6 +100,12 @@ http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category scri
 http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=# 喜马拉雅_去除我的页面Ad_Tag
 # > 顺丰
 http-response https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow requires-body=1, script-path = https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js
-
+# > 小红书
+# > XiaoHongShu_小红书_开屏广告@ddgksf2013
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config requires-body=1, script-path = https://github.com/ddgksf2013/Scripts/raw/master/xiaohongshu.js
+# > XiaoHongShu_小红书_瀑布流@ddgksf2013
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? requires-body=1, script-path = https://github.com/ddgksf2013/Scripts/raw/master/xiaohongshu.js
+# > XiaoHongShu_小红书_启动处理@ddgksf2013
+http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? requires-body=1, script-path = https://github.com/ddgksf2013/Scripts/raw/master/xiaohongshu.js
 [MITM]
-hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn， ccsp-egmas.sf-express.com
+hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn, ccsp-egmas.sf-express.com, edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,referee.xiaohongshu.com
