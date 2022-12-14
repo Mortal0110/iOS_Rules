@@ -78,7 +78,19 @@ DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade - reject-dict
 https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages - reject-dict
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen - reject
-
+# > 小红书
+# > XiaoHongShu_小红书_AdEngage@ddgksf2013
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/tag\/ads_engage - reject-dict
+# > XiaoHongShu_小红书_AdRecord@ddgksf2013
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/apple\/record - reject-dict
+# > XiaoHongShu_小红书_AdResource@ddgksf2013
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/resource - reject-dict
+# > XiaoHongShu_小红书_Report@ddgksf2013
+^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport - reject-dict
+# > XiaoHongShu_小红书_Switches@ddgksf2013
+^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches - reject-dict
+# > XiaoHongShu_小红书_Teenager@ddgksf2013
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status - reject-dict
 [Script]
 # > coolapk
 http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path = https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
