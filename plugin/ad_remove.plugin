@@ -1,5 +1,5 @@
 #!name= 去广告
-#!desc= 酷安、百度云、高德、喜马拉雅、云闪付、QQ音乐
+#!desc= 酷安、百度云、高德、喜马拉雅、云闪付、QQ音乐、顺丰
 #!openUrl= https://t.me/ddgksf2021
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
 
@@ -74,14 +74,20 @@ DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg - reject-img
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads - reject-img
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
+# > 顺丰
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade - reject-dict
+https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages - reject-dict
+^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen - reject
 
 [Script]
 # > coolapk
-http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path= https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
+http-response ^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path = https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js
 # > ximalaya
 http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽首页滚动_Ad
 http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽Tab页滚动_Ad
 http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path=https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/xmly_json.js, requires-body = true, tag=# 喜马拉雅_去除我的页面Ad_Tag
+# > 顺丰
+http-response https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow requires-body=1, script-path = https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js
 
 [MITM]
-hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn
+hostname = pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn， ccsp-egmas.sf-express.com
