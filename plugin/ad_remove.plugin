@@ -67,6 +67,9 @@ DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 ^https?:\/\/.*\.xima.*\.com\/guideWord url reject
 ^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
+# > 掌上英雄联盟开屏（卸载重装）
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend url reject-dict
+
 # > QQ音乐
 ^https?:\/\/us\.l\.qq\.com\/exapp - reject
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
