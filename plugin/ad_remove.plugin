@@ -39,6 +39,23 @@ DOMAIN-SUFFIX,e.qq.com,REJECT
 DOMAIN-SUFFIX,beacon.qq.com,REJECT
 DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 
+DOMAIN,adcdn.tencentmusic.com,REJECT
+DOMAIN,adexpo.tencentmusic.com,REJECT
+DOMAIN,adclick.tencentmusic.com,REJECT
+DOMAIN,otheve.beacon.qq.com,REJECT
+DOMAIN,monitor.music.qq.com,REJECT
+DOMAIN,stat.y.qq.com,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
+DOMAIN,oth.str.mdt.qq.com,REJECT
+DOMAIN,h.trace.qq.com,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
+DOMAIN-SUFFIX,imtmp.net,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+DOMAIN,p.l.qq.com,REJECT
+DOMAIN,us.l.qq.com,REJECT
+DOMAIN,tangram.e.qq.com,REJECT
+
+
 [Rewrite]
 # > baiduwangpan
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/bchannel\/list reject-200
