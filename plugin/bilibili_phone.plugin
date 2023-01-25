@@ -3,7 +3,7 @@
 #!openUrl=https://github.com/TaiPresident/iOS_Rules/edit/main/plugin
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
 
-/***********************************
+
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
@@ -11,7 +11,7 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
 # BiliBili漫画去广告
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
-***********************************/
+
 
 [Rewrite]
 # ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
