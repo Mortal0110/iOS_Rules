@@ -2,7 +2,7 @@
 #!desc = 过滤百度贴吧广告，需注意此插件会导致新回复等通知功能不可用，需手动进入消息页点击查看。仅限iOS 15及以上版本系统使用。
 #!openUrl = 
 #!author = app2smile
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!homepage = https://github.com/app2smile/rules
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Tieba.png
 
 [Rule]
