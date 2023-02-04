@@ -37,8 +37,7 @@ DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 # BiliBili漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject-dict
-# 切换至腾讯CDN以提高视频加载速度
-^https:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
+
 
 [Script]
 http-response ^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_追番去广告
@@ -51,11 +50,11 @@ http-response ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x
 http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/TaiPresident/QuantumultX/main/Script/bilibili-proto.js,requires-body=true,binary-body-mode=true,tag=BiliBili_proto去广告
 # http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=bili-proto
 http-response ;^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_去除统一设置的皮肤@ddgksf2013
-# http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图@ddgksf2013
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图@ddgksf2013
 http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_屏蔽首页右上活动@ddgksf2013
 http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_观影页面去广告@ddgksf2013
-http-response ;^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_cc.js,tag=BiliBili_哔哩哔哩_繁体CC字幕转中文简体[自行启用]@ddgksf2013
+# http-response ;^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_cc.js,tag=BiliBili_哔哩哔哩_繁体CC字幕转中文简体[自行启用]@ddgksf2013
 
 [MITM]
-hostname = *.bilibili.com,*.bilibili.*,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, app.bilibili.com, upos-hz-mirrorakam.akamaized.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net,i0.hdslb.com
+hostname = *.bilibili.com,*.bilibili.*,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, app.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
 
