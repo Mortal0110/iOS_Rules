@@ -3,7 +3,7 @@
 #!openUrl=https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zhihu
 #!author= blackmatrix7
 #!homepage= https://github.com/blackmatrix7/ios_rule_script
-#!icon= https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu.png
+#!icon= https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/icon/zhihu.png
 
 [Rule]
 # 知乎去广告
