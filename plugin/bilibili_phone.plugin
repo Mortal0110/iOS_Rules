@@ -5,7 +5,12 @@
 
 
 [Rule]
-# DOMAIN-SUFFIX,cm.bilibili.com,REJECT
+DOMAIN-SUFFIX,cm.bilibili.com,REJECT
+URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
+# 可能的一些推广(beta)
+URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
+# BiliBili漫画去广告
+URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 
 [Rewrite]
 # ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
@@ -28,8 +33,6 @@
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
 # 去除搜索中的大家都在搜
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject-dict
-# 去除动态中的话题
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
 # 去除动态中的最常访问
 ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject-dict
 # 可能的一些推广(beta)
