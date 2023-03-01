@@ -150,6 +150,10 @@ https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages - reject
 ^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches - reject-dict
 # > XiaoHongShu_小红书_Teenager@ddgksf2013
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status - reject-dict
+
+# > 中国银行
+^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-img
+
 [Script]
 # 微信公众号广告屏蔽(By Choler)
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, requires-body=true, timeout=10, tag=微信公众号广告屏蔽
@@ -175,4 +179,4 @@ http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? req
 # > XiaoHongShu_小红书_启动处理@ddgksf2013
 http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? requires-body=1, script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xiaohongshu.js
 [MITM]
-hostname = mp.weixin.qq.com, pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn, ccsp-egmas.sf-express.com, edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,referee.xiaohongshu.com
+hostname = mp.weixin.qq.com, pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn, ccsp-egmas.sf-express.com, edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,referee.xiaohongshu.com,mbs.boc.cn
