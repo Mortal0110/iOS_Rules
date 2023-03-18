@@ -29,7 +29,7 @@ http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script
 # varlens(自行添加hostname)
 http-response ^https?:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/varlen.js
 # 钱迹(自行添加hostname)
-http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/qj.js
+# http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/qj.js
 # 百度文库解锁VIP文档阅读权限
 http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/baidulibrary.js
 # 白描黄金会员
