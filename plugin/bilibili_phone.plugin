@@ -67,5 +67,5 @@ http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\
 # Proto 去除后台播放限制 //app.bilibili.com
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/View$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js, requires-body = true, binary-body-mode = true, tag = 去除后台播放限制
 [MITM]
-hostname = *.bilibili.com,*.bilibili.*,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, app.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname = *.bilibili.com,*.bilibili.*,api.live.bilibili.com,api.vc.bilibili.com,bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, app.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net,*biliapi.net
 
