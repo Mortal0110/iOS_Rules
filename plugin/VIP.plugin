@@ -15,8 +15,8 @@ http-response ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_recei
 # CamScanner 解锁部分高级特权（by NobyDa）
 http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
 # keep 6.27.0 7.36.0
-# http-response https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) requires-body=1,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/keep.js
-http-response ^https:\/\/api\.gotokeep\.com requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/keep.js
+http-response https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) requires-body=1,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/keep.js
+# http-response ^https:\/\/api\.gotokeep\.com requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/keep.js
 # 彩云天气
 http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/caiyun.js
 # vsco
