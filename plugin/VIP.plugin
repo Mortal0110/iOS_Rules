@@ -28,7 +28,7 @@ http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires
 #lightroom
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
 # varlens(自行添加hostname)
-http-response ^https?:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/varlen.js
+http-response ^https:\/\/mid\.zineapi\.com\/@varlens\/api\/user\/info\/ requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Varlens.js
 # 钱迹(自行添加hostname)
 # http-response https?://qianji.xxoojoke.com/(vip/configios|budget/submit) requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/qj.js
 # 百度文库解锁VIP文档阅读权限
