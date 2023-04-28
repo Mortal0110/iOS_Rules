@@ -24,7 +24,7 @@ if (!body.data) {
     } else if (url.includes("x/v2/feed/index")) {
         console.log('推荐页');
         // 设置需要显示的视频数目
-        const MAX_VIDEO_COUNT = 10;
+        const MAX_VIDEO_COUNT = 4;
         if (!body.data.items?.length) {
             console.log(`body:${$response.body}`);
             $notification.post(notifyTitle, '推荐页', "items字段错误");
