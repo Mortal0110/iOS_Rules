@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    const MAX_LIMIT = 6; // 最大限制条数
+    const MAX_LIMIT = 4; // 最大限制条数
     const ALLOWED_TYPE = [2]; // 允许的内容类型，如视频类型为2
 
     const data = $response.bodyResult.data;
