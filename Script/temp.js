@@ -9,21 +9,21 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+if ($response.body) {
+  let bodyJson = JSON.parse($response.body);
+  let feed = bodyJson.data || {};
+  let items = feed.items || [];
 
-    const MAX_LIMIT = 2; // 最大限制条数
-    const ALLOWED_TYPE = [2]; // 允许的内容类型，如视频类型为2
+  // 设置需要显示的视频数目
+  const MAX_VIDEO_COUNT = 2;
+  if (items.length > MAX_VIDEO_COUNT) {
+    // 仅保留前10个视频
+    items = items.slice(0, MAX_VIDEO_COUNT);
+    feed.items = items;
 
-    const data = $response.bodyResult.data;
-    const filteredData = data.filter(item => ALLOWED_TYPE.includes(item.type)).slice(0, MAX_LIMIT);
-
-    $done({
-        body: JSON.stringify({
-            code: 0,
-            message: "OK",
-            ttl: 1,
-            data: filteredData
-        })
-    });
-})();
+    // 更新响应数据
+    $done({ body: JSON.stringify(bodyJson) });
+  }
+} else {
+  $done({});
+}
