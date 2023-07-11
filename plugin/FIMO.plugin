@@ -1,0 +1,10 @@
+[Script]
+
+# > FIMO解锁全部胶卷
+http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$ requires-body=1,script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/FiMoCameraProCrack.js
+# > FIMO解锁终身会员
+http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$ requires-body=1,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraFVIPCrack.js
+
+[MITM] 
+
+hostname = server.yoyiapp.com
