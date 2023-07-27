@@ -5,7 +5,7 @@
 
 [Script]
 # > 剪映解锁会员
-http-response ^https?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock|effect\/check_effects) requires-body=1,script-path= https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/VideoFusionVipCrack.js
+http-response ^https?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock|effect\/check_effects) binary-body-mode=1, requires-body=1,script-path= https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/VideoFusionVipCrack.js
 [Mitm] 
 hostname = api*.faceu.mobi, api3-lq.faceu.mobi, commerce-api-lf.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com, lv-api-hl.ulikecam.com
 
