@@ -36,7 +36,6 @@ DOMAIN-SUFFIX,wup.imtt.qq.com,REJECT
 DOMAIN-SUFFIX,gdt.qq.com,REJECT
 DOMAIN-SUFFIX,android.rqd.qq.com,REJECT
 DOMAIN-SUFFIX,e.qq.com,REJECT
-DOMAIN-SUFFIX,beacon.qq.com,REJECT
 DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
 
 DOMAIN,adcdn.tencentmusic.com,REJECT
