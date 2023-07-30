@@ -93,11 +93,6 @@ DOMAIN-SUFFIX,afdback.ppsimg.com,REJECT
 DOMAIN,optimus-ads.amap.com,REJECT
 
 [Rewrite]
-# > baiduwangpan
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/bchannel\/list reject-200
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/welfare\/list reject-200
-^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject-200
-^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
 # > 酷安_屏蔽热词@ddgksf2013
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 # > gaodeditu
