@@ -1,12 +1,23 @@
 #!name = 百度网盘去广告
 #!desc = 过滤百度网盘广告
 #!openUrl = 
-#!author = RuCu6
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!author = @ddgksf2021
+#!homepage = https://t.me/ddgksf2021
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/BaiduNetDisk.png
 
 [Rewrite]
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
+# > 百度网盘_设置信息流@ddgksf2013
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject
+# > 百度网盘_通用广告@ddgksf2013
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad reject
+# > 百度网盘_活动推广@ddgksf2013
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject
+[Script]
+# > 百度网盘_开屏广告@ddgksf2013
+http-response ^https://pan.baidu.com/api/getsyscfg requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/baiduCloud.vip.js
+# > 百度网盘_会员权益@ddgksf2013
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/baiduCloud.vip.js
 
 [MITM]
 hostname = pan.baidu.com
