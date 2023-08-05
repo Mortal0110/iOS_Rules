@@ -24,7 +24,7 @@ http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\
 # Picsew解锁专业版
 # http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ requires-body=1,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
 # 百度网盘倍速播放
-# http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
 #lightroom
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* requires-body=1,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
 # varlens(自行添加hostname)
