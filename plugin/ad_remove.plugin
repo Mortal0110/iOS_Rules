@@ -152,12 +152,16 @@ https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages - reject
 # 微信公众号广告屏蔽(By Choler)
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, requires-body=true, timeout=10, tag=微信公众号广告屏蔽
 # > coolapk
-http-response ^https?:\/\/api.coolapk.com\/v6\/dataList requires-body=1, script-path = https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js,tag = 酷安_推广广告@ddgksf2013
-http-response ^https?:\/\/api.coolapk.com\/v6\/main\/indexV8 requires-body=1, script-path = https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js, tag = 酷安_首页广告@ddgksf2013
-http-response ^https?:\/\/api.coolapk.com\/v6\/feed\/replyList requires-body=1, script-path = https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js,tag = 酷安_评论广告@ddgksf2013
-http-response ^https?:\/\/api.coolapk.com\/v6\/feed\/detail requires-body=1, script-path = https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/coolapk.js,tag = 酷安_商品推广@ddgksf2013
-
-
+# > 酷安_开屏广告@ddgksf2013
+http-response ^https?:\/\/api.coolapk.com\/v6\/main\/init requires-body=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
+# > 酷安_推广广告@ddgksf2013
+http-response ^https?:\/\/api.coolapk.com\/v6\/dataList requires-body=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
+# > 酷安_首页广告@ddgksf2013
+http-response ^https?:\/\/api.coolapk.com\/v6\/main\/indexV8 requires-body=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
+# > 酷安_评论广告@ddgksf2013
+http-response ^https?:\/\/api.coolapk.com\/v6\/feed\/replyList requires-body=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
+# > 酷安_商品推广@ddgksf2013
+http-response ^https?:\/\/api.coolapk.com\/v6\/feed\/detail requires-body=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
 
 # > ximalaya
 http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽首页滚动_Ad
