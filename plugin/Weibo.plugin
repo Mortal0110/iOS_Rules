@@ -9,7 +9,7 @@
 #host, sdkapp.uve.weibo.com, direct
 
 [MITM]
-hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn
+hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.weibo.cn, boot.biz.weibo.com
 
 [URL Rewrite]
 # > 微博_应用内弹窗广告@ddgksf2013
@@ -18,7 +18,17 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - reject
 # > 微博_Spotlight@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - reject-dict
+# > 微博_用户推荐弹窗@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser - reject-dict
+# > 微博_每日一次的开屏广告请求@ddgksf2013
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - reject-200
+# > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo - reject-dict
+# > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily - reject-dict
 
+# > 微博国际版_趋势页热门影片@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl - reject-dict
 # > 微博国际版_屏蔽hotsearch@ddgksf2013
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - reject-dict
 # > 微博国际版_屏蔽热推荐@ddgksf2013
