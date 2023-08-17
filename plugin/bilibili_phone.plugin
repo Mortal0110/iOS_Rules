@@ -54,15 +54,22 @@ http-response ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x
 # http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ script-path=https://raw.githubusercontent.com/TaiPresident/QuantumultX/main/Script/bilibili-proto.js,requires-body=true,binary-body-mode=true,tag=BiliBili_proto去广告
 # http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=bili-proto
 http-response ;^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_去除统一设置的皮肤@ddgksf2013
+# BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图@ddgksf2013
 http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图@ddgksf2013
+# BiliBili_哔哩哔哩_屏蔽首页右上活动@ddgksf2013
 http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_屏蔽首页右上活动@ddgksf2013
 http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_观影页面去广告@ddgksf2013 
+# BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗[还有一个域名]@ddgksf2013
 http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?  requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_json.js,tag=BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗[还有一个域名]@ddgksf2013
-http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$ script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js,requires-body=true,binary-body-mode = true, tag=BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@app2smile@ddgksf2013
+# BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@BiliUniverse
+http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$ script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js,requires-body=true,binary-body-mode = true, tag=BiliBili_哔哩哔哩_UP主推荐广告[适配ipad端]@app2smile@ddgksf2013
 http-response ^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_cc.js,tag=BiliBili_哔哩哔哩_繁体CC字幕转中文简体[自行启用]@ddgksf2013
+# BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
 http-response ^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\? requires-body=1, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js,tag=BiliBili_哔哩哔哩_视频播放下方商品推广@ddgksf2013
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile) requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/bilibili.helper.beta.js,tag=BiliBili_哔哩哔哩_交互点赞投票弹幕@Maasea
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/BiliUniverse/ADBlock/main/js/BiliBili.ADBlock.response.js,tag=BiliBili_哔哩哔哩_青少年弹窗@Maasea
+# BiliBili_哔哩哔哩_交互点赞投票弹幕及会员弹幕@BiliUniverse
+http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile) requires-body=1, binary-body-mode=1, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js, tag=BiliBili_哔哩哔哩_交互点赞投票弹幕@Maasea
+# BiliBili_哔哩哔哩_青少年弹窗@BiliUniverse
+http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus requires-body=1, binary-body-mode=1, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js,tag=BiliBili_哔哩哔哩_青少年弹窗@Maasea
 # Proto 动态去广告
 http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_proto.js, requires-body = true, binary-body-mode = true, tag = 动态去广告
 # Proto 播放页去广告 //app.bilibili.com, grpc.biliapi.net
