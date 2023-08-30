@@ -4,22 +4,6 @@
 #!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
 
 [Rule]
-# > gaodeditu
-DOMAIN,u51.me,REJECT
-DOMAIN,logs.amap.com,REJECT
-DOMAIN,icloud-amap.com,REJECT
-DOMAIN,apiinit.amap.com,REJECT
-DOMAIN,aboard.apilocate.amap.com,REJECT
-DOMAIN-KEYWORD,ossgw.alicdn.com,REJECT
-DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
-DOMAIN-SUFFIX,logs.amap.com,REJECT
-DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
-DOMAIN-SUFFIX,page.amap.com,REJECT
-DOMAIN,optimus-ads.amap.com,REJECT
-DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
-DOMAIN-SUFFIX,shouji.sougou.com,REJECT
-DOMAIN-SUFFIX,adiu.amap.com,REJECT
-DOMAIN-SUFFIX,u51.me,REJECT
 # > unionpay
 DOMAIN-KEYWORD,switch.cup.com.cn,REJECT
 DOMAIN-KEYWORD,sdk.open.talk.getui.net,REJECT
@@ -89,34 +73,11 @@ DOMAIN,myg.qy.net,REJECT
 DOMAIN,www.qchannel01.cn,REJECT
 DOMAIN,iqiyi-mipdx.cn.miaozhen.com,REJECT
 DOMAIN-SUFFIX,afdback.ppsimg.com,REJECT
-# 高德地图
-DOMAIN,optimus-ads.amap.com,REJECT
+
 
 [Rewrite]
 # > 酷安_屏蔽热词@ddgksf2013
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
-# > gaodeditu
-^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
-^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
-^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
-# > ximalaya
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
-^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
-^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
-^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
-^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
-^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
-^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
-^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
-^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
-^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
-^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
-^https?:\/\/.*\.xima.*\.com\/hotWord url reject
-^https?:\/\/.*\.xima.*\.com\/guideWord url reject
-^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
-^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 # > 掌上英雄联盟开屏（卸载重装）
 ^https:\/\/mlol\.qt\.qq\.com\/go\/recommend url reject-dict
 
@@ -162,19 +123,7 @@ http-response ^https?:\/\/api.coolapk.com\/v6\/main\/indexV8 requires-body=1, bi
 http-response ^https?:\/\/api.coolapk.com\/v6\/feed\/replyList requires-body=1, binary-body-mode=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
 # > 酷安_商品推广@ddgksf2013
 http-response ^https?:\/\/api.coolapk.com\/v6\/feed\/detail requires-body=1, binary-body-mode=1, script-path = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/coolapk.js
-
-# > ximalaya
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽首页滚动_Ad
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js, requires-body = true, tag=喜马拉雅_屏蔽Tab页滚动_Ad
-http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js, requires-body = true, tag=# 喜马拉雅_去除我的页面Ad_Tag
 # > 顺丰
 http-response https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow requires-body=1, script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js
-# > 小红书
-# > XiaoHongShu_小红书_开屏广告@ddgksf2013
-http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config requires-body=1, script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xiaohongshu.js
-# > XiaoHongShu_小红书_瀑布流@ddgksf2013
-http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? requires-body=1, script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xiaohongshu.js
-# > XiaoHongShu_小红书_启动处理@ddgksf2013
-http-response ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? requires-body=1, script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xiaohongshu.js
 [MITM]
 hostname = mp.weixin.qq.com, pan.baidu.com, api.coolapk.com, m*.amap.com, optimus-ads.amap.com, *.xima*.*, *.xmcdn.*, us.l.qq.com, y.gtimg.cn, ccsp-egmas.sf-express.com, edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,referee.xiaohongshu.com,mbs.boc.cn
