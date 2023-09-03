@@ -1,5 +1,5 @@
-#!name = 百度网盘去广告
-#!desc = 过滤百度网盘广告
+#!name = 百度系列去广告
+#!desc = 过滤百度网盘、百度输入法、百度地图等广告
 #!openUrl = 
 #!author = @zqzess
 #!homepage = https://github.com/zqzess/rule_for_quantumultX
