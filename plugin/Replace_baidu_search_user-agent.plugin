@@ -3,7 +3,8 @@
 #!openUrl = 
 #!author = 可莉🅥 毒奶 RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Baidu.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Baidu.png
+#!date = 2023-09-08 13:48:55
 
 [Rewrite]
 ^https?:\/\/www\.baidu\.com 302 https://m.baidu.com
@@ -13,5 +14,5 @@
 # 移除百度搜索首页信息流
 http-response ^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$  script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body = true, tag = 移除百度搜索首页广告
 
-[MITM]
+[Mitm]
 hostname = m.baidu.com, www.baidu.com
