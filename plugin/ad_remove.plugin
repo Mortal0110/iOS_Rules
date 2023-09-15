@@ -56,30 +56,6 @@ DOMAIN-SUFFIX,sdk.kaijiawan.com,REJECT
 DOMAIN-SUFFIX,amemv.com,DIRECT
 # qq群公告小程序
 DOMAIN,cdn.ark.qq.com,DIRECT
-# 腾讯视频
-DOMAIN-SUFFIX,tetrack.qq.com,REJECT
-DOMAIN-SUFFIX,tpns.tencent.com,REJECT
-DOMAIN-SUFFIX,api.poll.video.qq.com,REJECT
-DOMAIN-SUFFIX,static-res.qq.com,REJECT
-DOMAIN-SUFFIX,stat.tpns.tencent.com,REJECT
-DOMAIN,h.trace.qq.com,REJECT
-DOMAIN,h.trace.qq.com,REJECT
-# 爱奇艺
-DOMAIN,cr-status.iqiyi.com,REJECT
-DOMAIN,f74f7f7765f8a2f6.ngaa.net.cn,REJECT
-DOMAIN,ef-dongfeng.tanx.com,REJECT
-DOMAIN,iqiyim.adtrack.enlightent.cn,REJECT
-DOMAIN,t7z.cupid.iqiyi.com,DIRECT
-DOMAIN,paopao-monitor.iqiyi.com,REJECT
-DOMAIN,puma-api.iqiyi.com,REJECT
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-DOMAIN-SUFFIX,upqzfile.com,REJECT
-DOMAIN,mbdlog.iqiyi.com,REJECT
-DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
-DOMAIN,myg.qy.net,REJECT
-DOMAIN,www.qchannel01.cn,REJECT
-DOMAIN,iqiyi-mipdx.cn.miaozhen.com,REJECT
-DOMAIN-SUFFIX,afdback.ppsimg.com,REJECT
 
 
 [Rewrite]
