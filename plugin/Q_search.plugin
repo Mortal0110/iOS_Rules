@@ -35,6 +35,9 @@ http-request ^https:\/\/duckduckgo.com\/\?q=dlj(\+|%20)([^&]+).+ requires-body=1
 ^https:\/\/duckduckgo.com\/\?q=YouDao(\+|%20)([^&]+).+ https://dict.youdao.com/search?q=$2 302
 
 # 社区
+# tt    xxx (头条)
+^https:\/\/duckduckgo.com\/\?q=tt\+([^&]+).+ https://so.toutiao.com/search?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=toutiao\+([^&]+).+ https://so.toutiao.com/search?keyword=$1 302
 # db xxx (豆瓣)
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
 ^https:\/\/duckduckgo.com\/\?q=douban\+([^&]+).+ https://m.douban.com/search/?query=$1 302
