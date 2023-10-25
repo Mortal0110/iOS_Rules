@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = I-am-R-E 张军
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Aiinquiry.png
+#!icon = https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/icon/Aiinquiry.png
 
 [Rewrite]
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
