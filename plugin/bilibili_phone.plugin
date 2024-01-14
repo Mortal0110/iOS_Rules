@@ -13,6 +13,8 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 
 [Rewrite]
+# ～ BiliBili_哔哩哔哩_点击追番Card@ddgksf2013
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards - reject-dict
 # ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - reject-dict
 # ～ BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
