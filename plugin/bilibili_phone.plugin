@@ -41,7 +41,10 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 # BiliBili漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject-dict
-
+# 移除视频链接跟踪参数
+(^https:\/\/(www|m)\.bilibili\.com\/video\/BV\w{10})((\/\?buvid=.*)|(\/\?share_source=.*)) 302 $1
+# 移除直播间链接跟踪参数
+(^https:\/\/live\.bilibili\.com\/\d+)((\?broadcast_type.*)|(\?launch_id.*)) 302 $1
 
 [Script]
 http-response ^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_plus.js,tag=BiliBili_追番去广告
