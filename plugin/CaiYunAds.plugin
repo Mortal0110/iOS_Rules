@@ -1,5 +1,5 @@
 #!name = 彩云天气净化
-#!desc = 过滤百度贴吧广告，需注意此插件会导致新回复等通知功能不可用，需手动进入消息页点击查看。仅限iOS 15及以上版本系统使用。
+#!desc = copy墨鱼彩云去广告qx规则
 #!openUrl = https://github.com/ddgksf2013/Rewrite/blob/master/AdBlock/CaiYunAds.conf
 #!author = @ddgksf2013
 #!homepage = https://github.com/ddgksf2013
