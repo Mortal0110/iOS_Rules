@@ -1,0 +1,34 @@
+#!name = 彩云天气净化
+#!desc = 过滤百度贴吧广告，需注意此插件会导致新回复等通知功能不可用，需手动进入消息页点击查看。仅限iOS 15及以上版本系统使用。
+#!openUrl = https://github.com/ddgksf2013/Rewrite/blob/master/AdBlock/CaiYunAds.conf
+#!author = @ddgksf2013
+#!homepage = https://github.com/ddgksf2013
+#!icon = 
+
+[Rewrite]
+# > 通用广告请求@ddgksf2013
+^https?:\/\/ad.cyapi.cn/v\d url reject-200
+
+[Script]
+# > 图层推广@ddgksf2013
+http-response ^https?:\/\/wrapper\.cyapi\.cn\/v\d\/activity script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 活动推广@ddgksf2013
+http-response ^https?:\/\/api\.caiyunapp\.com\/v\d\/activity script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 首页顶部推广@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/operation/homefeatures script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > SVIP提醒推广@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/notification/message_center script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 雨季特惠提醒@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/config/cypage script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 发现页信息流推荐@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/operation/feeds script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 发现页banners@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/operation/banners script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 发现页中间部分@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/operation/features script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+# > 发现页活动@ddgksf2013
+http-response ^https?:\/\/starplucker\.cyapi\.cn/v\d/campaigns script-path=https://raw.githubusercontent.com/Mortal0110/iOS_Rules/main/Script/caiyun_json.js
+
+
+[MITM]
+hostname = wrapper.cyapi.cn, api.caiyunapp.com, starplucker.cyapi.cn, ad.cyapi.cn
