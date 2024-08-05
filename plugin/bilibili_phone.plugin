@@ -14,7 +14,7 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 
 [Rewrite]
 # ～ BiliBili_哔哩哔哩_屏蔽4480端口[白B有问题]@kokoryh
-^http:\/\/.*:4480\/upgcxcode reject-200
+#^http:\/\/.*:4480\/upgcxcode reject-200
 # ～ BiliBili_哔哩哔哩_点击追番Card@ddgksf2013
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards - reject-dict
 # ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
@@ -49,6 +49,11 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 (^https:\/\/(www|m)\.bilibili\.com\/video\/BV\w{10})((\/\?buvid=.*)|(\/\?share_source=.*)) 302 $1
 # 移除直播间链接跟踪参数
 (^https:\/\/live\.bilibili\.com\/\d+)((\?broadcast_type.*)|(\?launch_id.*)) 302 $1
+# 满意度调研
+^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? reject-dict
+# 流量卡推荐
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/TFInfo$ reject
+
 
 [Script]
 http-response ^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/TaiPresident/iOS_Rules/main/Script/bilibili_plus.js,tag=BiliBili_追番去广告
