@@ -1,4 +1,4 @@
-# iOS_Rules
+# iOS_Rules自用
 
 AD        为去广告重写的目录 
 cookie    为获取cookie的脚本目录
