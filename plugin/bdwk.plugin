@@ -1,11 +1,11 @@
 #!name=百度文库
 #!desc=解锁文档阅读权限
-#!homepage=https://yfamily.ml
-#!author=ddgksf2013
+#!homepage=https://t.me/py
+#!author=彭于晏💞
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/bdwk.png
 
 [Script]
-http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js
+http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bdwk.js
 
 [MITM] 
 hostname = appwk.baidu.com
